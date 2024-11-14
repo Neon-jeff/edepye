@@ -8,6 +8,7 @@ export default async function SendMail(
   const request = await req.body;
 
   const transporter: nodemailer.Transporter = nodemailer.createTransport({
+    service:'Gmail',
     host: process.env.NEXT_PUBLIC_EMAIL_HOST,
     port: 465,
     secure: true,
